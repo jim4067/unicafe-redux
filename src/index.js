@@ -24,6 +24,12 @@ const App = () => {
 		})
 	}
 
+	const zero = () => {
+		store.dispatch({
+			type: 'ZERO'
+		})
+	}
+
 	return (
 		<div>
 
@@ -36,7 +42,7 @@ const App = () => {
 			<button onClick={bad}>
 				bad
 				</button>
-			<button>
+			<button onClick={zero}>
 				reset stats
 				</button>
 			<div>good {store.getState().good}</div>
@@ -52,8 +58,4 @@ const renderApp = () => {
 }
 
 renderApp();
-//store.subscribe(renderApp);
-store.subscribe(() => {
-	const storeNow = store.getState()
-	console.log("the store now",storeNow)
-  })
+store.subscribe(renderApp);
