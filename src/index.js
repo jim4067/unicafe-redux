@@ -9,25 +9,25 @@ const App = () => {
 	const good = () => {
 		store.dispatch({
 			type: 'GOOD'
-		})
+		});
 	}
 
 	const ok = () => {
 		store.dispatch({
 			type: 'OK'
-		})
+		});
 	}
 
 	const bad = () => {
 		store.dispatch({
 			type: 'BAD'
-		})
+		});
 	}
 
 	const zero = () => {
 		store.dispatch({
 			type: 'ZERO'
-		})
+		});
 	}
 
 	return (
@@ -54,7 +54,7 @@ const App = () => {
 }
 
 const renderApp = () => {
-	ReactDOM.render(<App />, document.getElementById('root'))
+	ReactDOM.render(<App />, document.getElementById('root'));
 }
 
 renderApp();
